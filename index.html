@@ -218,6 +218,26 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid va
 
 @media(max-width:1000px){.srv-g{grid-template-columns:1fr 1fr}.hiw-g{grid-template-columns:1fr 1fr}.bento-g{grid-template-columns:1fr 1fr}.bc.lg{grid-column:span 1}.price-g{grid-template-columns:1fr}.testi-g{grid-template-columns:1fr 1fr}.stats-g{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}.nav-links{display:none}.dbody{grid-template-columns:1fr}.dpane:first-child{border-right:none;border-bottom:1px solid var(--border)}}
 @media(max-width:640px){.srv-g{grid-template-columns:1fr}.bento-g{grid-template-columns:1fr}.testi-g{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.hiw-g{grid-template-columns:1fr}}
+
+/* ===== EBOOK BANNER + SECTION ===== */
+.eb-bar{position:fixed;top:68px;left:0;right:0;z-index:499;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;padding:16px 52px 16px 20px;background:linear-gradient(90deg,#b45309,#f59e0b);color:#111;font-size:1.05rem;font-weight:700;text-align:center;line-height:1.4;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.eb-bar a{background:#111;color:#fff;text-decoration:none;padding:10px 26px;border-radius:99px;font-size:.95rem;font-weight:800;white-space:nowrap}
+.eb-bar button{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;font-size:1.6rem;line-height:1;color:#111;cursor:pointer;padding:6px 10px}
+.hero{padding-top:12rem}
+.eb-sec{scroll-margin-top:150px;position:relative;z-index:10;padding:clamp(4rem,8vw,6rem) clamp(1.5rem,5vw,4rem);background:var(--bg1)}
+.eb-card{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:2.5rem;align-items:center;background:var(--bg2);border:1px solid rgba(245,158,11,.3);border-radius:24px;padding:clamp(1.5rem,4vw,3rem)}
+.eb-card h2{font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.3;margin:.6rem 0 .8rem;font-weight:800}
+.eb-card p{color:var(--text2);line-height:1.7;font-size:.95rem}
+.eb-list{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem;font-size:.9rem;color:var(--text)}
+.eb-list li:before{content:"\2713";color:var(--green);font-weight:700;margin-right:8px}
+.eb-buy{background:var(--bg3);border:1px solid var(--border2);border-radius:18px;padding:1.6rem;text-align:center}
+.eb-price{display:flex;justify-content:center;align-items:baseline;gap:10px;margin:.5rem 0}
+.eb-price b{font-size:2.6rem;color:var(--orange);font-weight:800}
+.eb-price s{color:var(--text3);font-size:1.1rem}
+.eb-btn{display:block;background:var(--orange);color:#111;font-weight:800;text-decoration:none;padding:14px 20px;border-radius:99px;font-size:1rem;margin-top:.8rem}
+.eb-btn:hover{box-shadow:0 8px 28px rgba(245,158,11,.4)}
+.eb-note{font-size:.72rem;color:var(--text3);margin-top:.9rem;line-height:1.5}
+@media(max-width:800px){.eb-card{grid-template-columns:1fr}.eb-bar{font-size:.9rem;padding:14px 44px 14px 14px;gap:10px}.hero{padding-top:13rem}}
 </style>
 </head>
 <body>
@@ -282,6 +302,7 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid va
     <span class="brand-name">India<em>GlobalTech</em></span>
   </a>
   <div class="nav-links">
+    <a href="#ebook">Ebook</a>
     <a href="#services">Services</a>
     <a href="#demo">Demo</a>
     <a href="#pricing">Pricing</a>
@@ -292,6 +313,9 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid va
     <button class="btn-cta" onclick="openModal('signup')">Get Started Free →</button>
   </div>
 </nav>
+
+<!-- EBOOK BANNER -->
+<div class="eb-bar" id="ebBar"><span>📘 New: India Business Government Work Guide (Hindi) + 5 Bonus Tools<br><span style="font-weight:600;font-size:.9em">Launch price ₹199 for first 50 customers</span></span><a href="/ebook/" class="ebuy">Buy Now</a><button aria-label="Close" onclick="document.getElementById('ebBar').style.display='none'">×</button></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -331,6 +355,31 @@ footer{position:relative;z-index:10;background:var(--bg);border-top:1px solid va
 </div>
 
 <div class="gline"></div>
+
+<!-- EBOOK SECTION -->
+<section class="eb-sec" id="ebook">
+  <div class="eb-card reveal">
+    <div>
+      <div class="stag" style="--st-bg:rgba(245,158,11,.08);--st-c:#fbbf24;--st-b:rgba(245,158,11,.25);margin:0">Hindi Guide · Digital Product</div>
+      <h2>India Business Government Work Guide</h2>
+      <p>Business registration se compliance tak, sab kuch simple Hindi mein ek jagah. New entrepreneurs, shop owners, freelancers aur MSME owners ke liye.</p>
+      <ul class="eb-list">
+        <li>Proprietorship, LLP, Pvt Ltd, PAN, Udyam/MSME</li>
+        <li>GST, TDS, Income Tax, ROC, Shops Act, PF/ESI</li>
+        <li>Trademark, FSSAI, IEC, GeM, MUDRA, PMEGP basics</li>
+        <li>Government notice aaye to shuruaati steps</li>
+        <li>Bonus: Registration &amp; Documents checklists, Portal Directory, Compliance Calendar, Editable Tracker</li>
+      </ul>
+    </div>
+    <div class="eb-buy">
+      <div style="font-size:.8rem;color:var(--text2)">Launch Offer · First 50 customers</div>
+      <div class="eb-price"><b>₹199</b><s>₹299</s></div>
+      <a href="/ebook/" class="eb-btn ebuy">Buy Now →</a>
+      <div style="font-size:.78rem;color:var(--text2);margin-top:.7rem">Payment ke baad download access milta hai</div>
+      <div class="eb-note">Educational guide only. Applicable rules and eligibility may vary. Verify on official portals or with a qualified professional. Yeh legal, tax ya financial advice nahi hai.</div>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES -->
 <section class="sec" style="background:var(--bg1)" id="services">
